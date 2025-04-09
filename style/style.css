@@ -2,6 +2,7 @@
 h1 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 30px;
+    padding: 20px;
 }
 p {
     font-family: 'Times New Roman', Times, serif;
@@ -26,5 +27,19 @@ p {
 .button {
     padding-left: 700px;
     padding-top: 400px;
+    
+}
+.edu {
+    font-size: x-large;
+}
+
+.edulogo {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom:20px
     
 }
