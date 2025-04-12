@@ -43,3 +43,70 @@ p {
     margin-bottom:20px
     
 }
+.card {
+    
+    border-color: rgb(165, 163, 160);
+    border-radius: 15px;
+    /* border-style: solid; */
+    height: 124px;
+    width: 354px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.maincard {
+    display: flex;
+    flex-direction: row;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    
+}
+.details {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+}
+
+.details2 {
+    margin-right: 100px;
+}
+
+.cgpa {
+    direction: rtl;
+    height:auto;
+    width: auto;
+}
+
+.cardc {
+    
+   
+    border-color: rgb(165, 163, 160);
+    border-radius: 15px;
+    /* border-style: solid; */
+    height: 134px;
+    width: 354px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.cft {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+}
+.container {
+     display: flex;
+     margin: 0px;
+     padding-top: -10px;
+}
+.description {
+     font-size: 16px;
+     padding: 0px;
+     margin: 0px;
+}
