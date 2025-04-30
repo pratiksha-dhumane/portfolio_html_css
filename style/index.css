@@ -16,26 +16,37 @@ html{
 body {
     font-family: "Poppins", sans-serif;
 }
+
 h1,h5 {
     margin-bottom: 0px;  
+    
 }
+
 .primaryBtn {
-    padding: 6px 12px;
+    padding: 8px 14px;
     background:var(--primary) ;
     color: var(--white);
     border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
 }
+
 .secondaryBtn {
     padding: 6px 12px;
     background:var(--white) ;
     color: var(--black);
     border-radius: 12px;
     border: 1px solid var(--black);
-
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
 }
+
 .lang img {
-    width: 50px;
+    width: 40px;
     
 }
 a:hover {
