@@ -8,9 +8,9 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-<section class="relative h-screen">
+<section class="relative h-screen ">
 
-  <nav >
+  <nav class="">
     <div  class="flex justify-between items-center px-6 py-4">
     <span class="flex gap-4">
       <img src="img/logo.svg" alt="">
@@ -39,8 +39,8 @@
   <!--Hero Section -->
   
 
-  <div class="px-32 flex items-center">
-
+  <div class="flex items-center sm:flex-col sm :px-0 sm:m-0  sm:text-left sm: items-left">
+    
     <div class="flex flex-col gap-6 w-3/5">
       <h1 class="text-6xl font-bold">Hello I’m Pratiksha, Frontend developer</h1>
       <p>
@@ -52,21 +52,21 @@
         environment.
       </p>
       <div class="flex gap-6">
-        <button class="primaryBtn"><span class="flex items-center gap-2"><img src="img/eduwhite.svg">Download Resume</span></button>
-        <button class="secondaryBtn"><span class="flex items-center gap-2"><img src="img/arrow.svg">Know More</span></button>
+        <button class="primaryBtn"><span class="flex items-center gap-2 sm:text-xs  sm:gap-1"><img src="img/eduwhite.svg" class="sm:w-6">Download Resume</span></button>
+        <button class="secondaryBtn"><span class="flex items-center gap-2 sm:text-xs  sm:gap-1"><img src="img/arrow.svg">Know More</span></button>
        </div>
 
      
 
     </div>
 
-    <div class=" w-2/5">
+    <div class=" w-2/5 sm:w-full sm:justify-end md: w-1/2 md:justify-end md: w-50">
       <img class="object-fit" src="img/Picture1.png" alt="" />
     </div>
 
     
   </div> 
-  <div class="flex lang gap-6 absolute bottom-16 left-20">
+  <div class="sm:flex sm:justify-items-center sm: absolute bottom-center sm: items-center sm:m-left-6 flex lang gap-6 lg: absolute bottom-16 left-20  ">
     <img src="img/html.png" />
     <img src="img/css.jpg"  />
     <img src="img/bootstrap.png"  />
@@ -76,7 +76,6 @@
 
   
 
-      
 
  
       
