@@ -1,0 +1,77 @@
+[
+  {
+  "_id": {
+    "$oid": "681e7f3e235942894f55f655"
+  },
+  "reportId": "report1_1746829118563",
+  "productId": "Cefixime_Tablets_USP_400_mg_1715297850324",
+  "productName": "Cefixime Tablets USP 400 mg",
+  "pageData": {},
+  "drafts": {},
+  "isSubmitted": false,
+  "lastVisited": 1,
+  "createdAt": {
+    "$date": "2025-05-09T22:18:38.596Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T22:18:38.596Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681e7fb93bc7883d6f164140"
+  },
+  "reportId": "report2_1746829241702",
+  "productId": "Cefixime_Tablets_USP_400_mg_1715297850324",
+  "productName": "Cefixime Tablets USP 400 mg",
+  "pageData": {},
+  "drafts": {},
+  "isSubmitted": false,
+  "lastVisited": 1,
+  "createdAt": {
+    "$date": "2025-05-09T22:20:41.730Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-09T22:20:41.730Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f18dd9166048c653fdeed"
+  },
+  "reportId": "report3_1746868445291",
+  "productId": "Cefixime_Tablets_USP_400_mg_1715297850324",
+  "productName": "Cefixime Tablets USP 400 mg",
+  "pageData": {},
+  "drafts": {},
+  "isSubmitted": false,
+  "lastVisited": 1,
+  "createdAt": {
+    "$date": "2025-05-10T09:14:05.311Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-10T09:14:05.311Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681f9aa8f07e2e9e4d33edb1"
+  },
+  "reportId": "report4_1746901672557",
+  "productId": "Cefixime_Tablets_USP_400_mg_1715297850324",
+  "productName": "Cefixime Tablets USP 400 mg",
+  "pageData": {},
+  "drafts": {},
+  "isSubmitted": false,
+  "lastVisited": 1,
+  "createdAt": {
+    "$date": "2025-05-10T18:27:52.585Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-10T18:27:52.585Z"
+  },
+  "__v": 0
+}]
