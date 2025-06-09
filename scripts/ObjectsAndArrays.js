@@ -63,7 +63,7 @@
 
 
     // Ref - [01001]
-    let array1 = [1, 2, 3];
+    // let array1 = [1, 2, 3];
     // let array2 = array1;
     // array1.push(4);
     // array1.push(5);
@@ -80,13 +80,13 @@
     // console.log("array4", array4);
 
     // clone array with new reference (instance)
-        // const array5 = [...array1, ...array2, 16, 17 ];
-        // console.log("array5", array5);
+    //     const array5 = [...array1, ...array2, 16, 17 ];
+    //     console.log("array5", array5);
 
-        // array1.push(6);
+    //     array1.push(6);
 
-        // console.log("array1", array1);
-        // console.log("array5", array5);
+    //     console.log("array1", array1);
+    //     console.log("array5", array5);
 
 
 // Arrray Interation
@@ -113,7 +113,7 @@
         }
     }
 
-    const capitilised = fruits.map((itm, index)=>{
+    const capitilised = fruits.map((itm, i)=>{
         return itm.charAt(0).toUpperCase() + itm.slice(1)
     })
 

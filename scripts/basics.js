@@ -37,7 +37,7 @@ function add (){
     // console.log("fullName =>", "My full name is" +firstName + " " + lastName);
     // console.log(`My full name is ${firstName} ${lastName}`);
 
-    // console.log("name", firstName[firstName.length-2])
+    // console.log("name", firstName[firstName.length-2]) op=>h
     // console.log("firstName", firstName)
     // how to print last letter of any string in js.
 
@@ -207,7 +207,7 @@ function add (){
         }
 
         for( let i=0; i<=5; i++){
-            if(i === 6) continue;
+            if(i === 3) continue; 
             if( i === 5) break;
             console.log(i);
         }
