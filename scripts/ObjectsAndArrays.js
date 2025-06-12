@@ -54,15 +54,15 @@
 
 
 // Primitive Vs Ref type
-    let num1 = 5;
-    let num2 = num1;
-    num1 = 1;
+    // let num1 = 5;
+    // let num2 = num1;
+    // num1 = 1;
 
-    console.log(num1);
-    console.log(num2)
+    // console.log(num1);
+    // console.log(num2)
 
 
-    // Ref - [01001]
+    // // Ref - [01001]
     // let array1 = [1, 2, 3];
     // let array2 = array1;
     // array1.push(4);
@@ -113,55 +113,253 @@
     //     }
     // }
 
-    // const capitilised = fruits.map((itm, i)=>{
+    // const capitilised = fruits.map((itm, index)=>{
     //     return itm.charAt(0).toUpperCase() + itm.slice(1)
     // })
 
     // console.log("capitilised in map", capitilised)
 
-
-
-
-
-    // for, of, in
+    // // for, of, in
 
     // for( let fruit in fruits){
     //     console.log(fruit)
     // }
 
-    const array6 = [2, 5, 7, 5, 89,8]
-    function sumArray(arr){
-        console.log("Props array")
-    let sum=0;
-    for(let i=0; i<arr.length; i++){
-        sum += arr[i];
-        // console.log(sum)
+    // array distructuring --
+
+
+    // Object --
+    // Objects dont have index, they are stored in key value pair
+
+    // // notations (dot, bracket))
+
+    // diff between dot & bracket
+
+
+    // how to iterate array
+
+    // objects.keys, objects.value
+
+    // computed properties
+    
+    // spread operator
+
+
+    // const fruits = ['banana', 'apple', 'Grapes', "water melon dude", 'orange', 'papaya', "passion fruit", "dragon fruit"];
+    // const result = [];
+   
+
+    // for(let i = 0; i< fruits.length; i++){
+
+    //     const capitilisedWords = [];
+
+    //     let fruit = fruits[i];
+    //     const words = fruit.split(" "); 
+    //     for(let j = 0; j<words.length; j++){
+    //         let word = words[j];
+    //         // let calculateWord = word.charAt(0).toUpperCase() + word.slice(1);
+    //         let calculateWord = word.slice(0, word.length-1) +  word.charAt(word.length-1).toUpperCase();
+    //         capitilisedWords.push(calculateWord);
+    //     }
+
+    //     console.log("capitilisedWords=>", capitilisedWords);
+
+    //     result.push(capitilisedWords.join(" "));
+
+    // }
+
+    // console.log("result", result);
+
+
+    // for will iterate as per condition but will not return anything (function for return)--- 
+    // map will iterate all array by returning it, we cant break it
+    
+//     function calculateCapitla (fruits){
+//         let  result = [];
+
+//         for(let i = 0; i< fruits.length; i++){
+//           let fruit = fruits[i];
+//           let capitilised = fruit.charAt(0).toUpperCase() + fruit.slice(1); // Apple
+//           result.push(capitilised)
+//         }
+
+//         return result
+//     }
+//     console.log(calculateCapitla(fruits));
+
+
+//    const  result = fruits.map((fruit, index)=>{
+//         return (fruit.charAt(0).toUpperCase() + fruit.slice(1))
+//     }).filter((fruit, index)=> fruit.startsWith("B"))
+//     console.log("result", result);
+
+    // const filteredResult = fruits.filter((fruit, index)=> fruit.startsWith("b")).map((fruit, index)=>{
+    //     return (fruit.charAt(0).toUpperCase() + fruit.slice(1))
+    // });
+
+    // console.log("filteredResult", filteredResult);
+
+
+
+
+    // map, filter -- 
+
+    // {
+
+        
+
+    // return(
+    //     <h1>jhfjdhf</h1>
+    // )
+    // }
+
+    // Array desctrucing ----
+        // const array1 = [1,2,3];
+        // const array2 = [4,5,6]
+        // const array3 = [ ...array1, ...array2]
+        // console.log(...array3);
+
+    // objects ---
+    // { key : value}
+    const student = {
+        fName :"Pratiksha",
+        rollNo : 12,
+        "technical skills" : ["Cricket", "guitar", "boxing", "coding"]
     }
-    return sum;
-}
-console.log(sumArray(array6))
 
-let sum=0;
- array6.map((number , i)=>{
-    sum +=number;
-})
-console.log("Sum using map",sum)
+    // methods to access keys of objects
+    // 1. Dot notation ( static)
+        console.log("fname using dot not =>", student.fName);
+    
+        // add new key using dot notation
+        student.age = 25;
+    
+    // 2. Bracket notation (Dynamic)
+        console.log("fname using bracket not =>", student["technical skills"])
+        const newKey = "email";
+        student[newKey] = "pratiksha@gmail.com";
+    
+        console.log("student ==>", student);
 
-function largestNum(arr){
-let largestNum=0;
-for (let i=0;i<arr.length;i++){
-    if(arr[i]>largestNum){
-        largestNum =arr[i];
-    }
-}
-return largestNum
-}
-console.log(largestNum(array6));
 
-let largestNumber=0;
-array6.map (num=>{if(num>largestNumber)  largestNumber =num;   
-})
-console.log("largest number using map",largestNumber)
+ // How to iterate objects --- 
+ 
+        for(let key in student){
+            console.log(key, "->", student[key]);
+        }
 
-const doubled = array6.map(num=>2*num)
-console.log("doubled",doubled)
+
+// Computed properties ---
+        const key1 = "lastName";
+        const key2 = "result";
+
+        const value1 = "Ghodke";
+        const value2 = "fail";
+
+        {
+            lastName : "Ghodke";
+            result: "fail"
+        }
+
+        student[key1] = value1;
+        student[key2] = value2;
+
+        console.log("student at the end", student);
+
+        sportKey = "player";
+        index = 1
+        value = "Pramod";
+
+        const sports = {};
+
+        // {
+        //     player1 : "Pramod",
+        // }
+        sports[`${sportKey} ${index}`] = value;
+        console.log("sports == >", sports)
+
+        // Destructing objects ---
+            const patient= {
+                pName : "Mental",
+                belogns: "Madiz Hospital",
+                age: 20,
+                country : "turkey"
+            }
+
+            // const { pName, age, country = "pakistan" } = patient;
+            // console.log("pName =>", PatientName, age, country);
+
+            const patient2={
+                info: {
+                    pName : "Mental2 ",
+                    belogns: "Madiz Hospital",
+                    age: 20,
+                    country : "turkey"
+                },
+                isDelete : false
+            }
+
+            // const { info: {pName, age}} = patient2;
+            // console.log("pName", pName);
+
+            // console.log("spreading", {...patient2});
+
+            const { pName, age, mName="jhfjdg", ...restProps } = patient;
+            console.log("Pname", pName, age, mName);
+            console.log("...restProps", restProps);
+
+            // const result1 = {
+            //     key1: "Somehthing",
+            //     key2: "Everything",
+            //     key1:"Nothing"
+            // }
+
+            // console.log("result1 =>", result1)
+
+            const a = { key1:"Something", key2:"Everything"}
+            const b = { key3 : "Nothing" };
+            const result2 = { ...a, ...b};
+            console.log("result2=>", result2);
+
+            function calculate ({x, y, z}){
+                let sum = x + y + z;
+                return sum;
+            }
+
+            const params = { x:2, y:5, z:6 };
+
+            console.log("objects.keys", calculate(params.x, params.y, params.z));
+
+            console.log("destructure in funtion paramter", calculate(params)); // instead spread at fun. params
+
+            console.log("using spread on object", ...[params.x, params.y, params.z]);
+        
+            const result = calculate(params);
+            console.log("result sum", result);
+
+            const keys = Object.keys(patient2.info);
+            console.log("keys", keys)
+
+            const values = Object.values(patient2.info);
+            console.log("values", values);
+
+            console.log("type of values", Array.isArray(values) ? "Array hai" : "nhi re baba");
+
+            // const status = "pratiskha";
+            // console.log("status", status);
+            // name, status cannot be declared 
+          
+
+
+
+
+
+
+
+        
+      
+
+        
+
+       
+    
