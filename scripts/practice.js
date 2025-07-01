@@ -95,9 +95,179 @@
 //     console.log(text);
 
 // const readlineSync = require("readline-sync");
-import readlineSync from "readline-sync"
+// import readlineSync from "readline-sync"
 
-// const userName = readlineSync.question("Enter your name: ");
-// console.log(`Hello ${userName}!`);
-var userName = readlineSync.question('May I have your name? ');
-console.log('Hi ' + userName + '!');
+// // const userName = readlineSync.question("Enter your name: ");
+// // console.log(`Hello ${userName}!`);
+// var userName = readlineSync.question('May I have your name? ');
+// console.log('Hi ' + userName + '!');
+
+
+
+/* LOGICAL OPERATORS EXAMPLES */
+
+/* ---------------------------- */
+/*         AND (&&)             */
+/* ---------------------------- */
+
+// Returns the first falsy value or last truthy one
+
+// console.log("a" && "b" && "d");       // "d" — All truthy, returns last
+// console.log("a" && "" && "d");        // "" — First falsy
+// console.log("a" && "b" && "");        // "" — First falsy
+// console.log("" && "b" && "d");        // "" — First falsy
+// console.log("a" && "" && "");         // "" — First falsy
+// console.log("" && "b" && "");         // "" — First falsy
+// console.log("" && "" && "d");         // "" — First falsy
+// console.log("" && "" && "");          // "" — First falsy
+
+// console.log("a" && "b" && null);      // null — First falsy (null)
+// console.log("a" && "b" && undefined); // undefined — First falsy (undefined)
+// console.log("a" && null && "c");      // null — First falsy
+// console.log(null && "b" && "a");      // null — First falsy
+
+// /* ---------------------------- */
+// /*         OR (||)              */
+// /* ---------------------------- */
+
+// // Returns the first truthy value or last falsy one
+
+// console.log("a" || "b" || "d");       // "a" — First truthy
+// console.log("" || "b" || "d");        // "b" — Skips first falsy
+// console.log("" || "" || "d");         // "d" — First truthy
+// console.log("" || "" || "");          // "" — All falsy, returns last
+// console.log(null || "b" || "c");      // "b" — First truthy
+// console.log(undefined || null || "c");// "c" — First truthy
+// console.log(null || undefined || ""); // "" — All falsy
+
+// /* ---------------------------- */
+// /*     COMBINED (&& and ||)     */
+// /* ---------------------------- */
+
+// // AND has higher precedence than OR
+
+// console.log("a" && "b" || "c");       // "b" — ("a" && "b") => "b", then "b" || "c" => "b"
+// console.log("a" || "b" && "c");       // "a" — "b" && "c" => "c", then "a" || "c" => "a"
+// console.log("" && "b" || "c");        // "c" — "" && "b" => "", then "" || "c" => "c"
+// console.log("a" && "" || "c");        // "c" — "a" && "" => "", then "" || "c" => "c"
+// console.log("a" && null || undefined);// undefined — "a" && null => null, null || undefined => undefined
+// console.log("a" || null && "b");      // "a" — null && "b" => null, "a" || null => "a"
+
+// /* ------------------------------------------ */
+// /*         LOGICAL OPERATORS CHEAT SHEET      */
+// /*         Focus: 0, null, undefined           */
+// /* ------------------------------------------ */
+
+// /* ---------- AND (&&) ---------- */
+// // Returns the first falsy value, or the last truthy if all are truthy
+
+// 0 && "a";               // => 0         // 0 is falsy, returned immediately
+// "a" && 0;               // => 0         // 0 is falsy, returned
+// null && "a";            // => null      // null is falsy
+// "a" && undefined;       // => undefined // undefined is falsy
+// "a" && "b";             // => "b"       // all truthy, returns last
+
+// /* ---------- OR (||) ---------- */
+// // Returns the first truthy value, or the last falsy if all are falsy
+
+// 0 || "a";               // => "a"       // 0 is falsy, next is truthy
+// "a" || 0;               // => "a"       // first truthy value
+// null || "a";            // => "a"       // null is falsy
+// undefined || "a";       // => "a"       // undefined is falsy
+// null || 0 || undefined; // => undefined // all falsy, returns last
+
+// /* ---------- Summary ---------- */
+// // && stops at falsy and returns it
+// // || stops at truthy and returns it
+
+// // Falsy values in JS: 
+// // - 0
+// // - null
+// // - undefined
+// // - false
+// // - ""
+// // - NaN
+
+// let arr=["a","b","c"];
+// let arr1=["w",];
+
+// for(let i=0;i<arr.length;i++){
+//     for(let j=0;j<arr1.length;j++){
+//        if(arr[i]==arr1[j]) {
+//         console.log(arr[i]," is Same in both arrays ")
+//        }
+// }
+// }
+// Define a string to be analyzed
+const inputString = "hello, I love GFG...";
+
+// Define a string that contains all lowercase vowels
+const vowels = "aeiou";
+
+// Loop through each character in the input string
+// for (let i = 0; i < inputString.length; i++) {
+
+//     // Check if the current character (converted to lowercase) is a vowel
+//     // .includes() returns true if the character exists in the 'vowels' string
+//     if (vowels.includes(inputString[i].toLowerCase())) {
+        
+//         // If true, it's a vowel
+//         console.log(`${inputString[i]} is a vowel`);
+//     } else {
+
+//         // If false, it's not a vowel
+//         console.log(`${inputString[i]} is not a vowel`);
+//     }
+// }
+
+// "aeiou".includes("e") → true, because 'e' is in the string
+// "aeiou".includes("x") → false, because 'x' is not in the string
+// Case-sensitive: "aeiou".includes("I") → false, use toLowerCase() to fix this
+
+
+
+// function calculateSum(min,max){
+//     for(let i=min ;i<=max;min++){
+//         let sum =0;
+//         sum += min+1
+//         console.log("sum is",sum)
+//     }
+// }
+// calculateSum(5,10);
+
+
+
+// const message = "Pratiksha";
+// const index = 6;
+// const char = message.charAt(index);
+// const code = message.charCodeAt(char);
+// console.log(`Ascii code of ${char} is ${code}`);
+
+
+const message ="Pratiksha";
+    let newMessage ="";
+
+for (let i=0 ; i<message.length ; i++){
+    let char = message.charAt(i);
+    let code = message.charCodeAt(i);
+    // console.log(`Ascii Code of ${char} is ${code}`);
+    let newCode = code-2;
+    let newStr = String.fromCharCode(newCode);
+    newMessage +=newStr;
+ 
+}
+  console.log(newMessage); 
+  console.log(message.indexOf("a"))
+
+
+
+
+
+
+
+
+
+
+
+
+
