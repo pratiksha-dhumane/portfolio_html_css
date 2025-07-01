@@ -357,7 +357,103 @@ console.log (null===undefined); //false cuz null has object as datatype whereas 
 console.log("=========10==");
 
 
+/* 
+    CONDITIONAL STATEMENTS
+
+    1. if-else statement
+    2. else-if statement
 
 
 
+*/
 
+const userAge = 20;
+// const readlineSync = require("readline-sync");
+// const userAge = readlineSync.question("Enter your age : ");
+
+if (userAge >18){
+    console.log("You are Adult");
+}else{
+    console.log("You are not an adult")
+}
+
+const checkNum = 45;
+// const readlineSync = require("readline-sync");
+// const checkNum = Number(readlineSync.question("Enter the number :"));
+
+//    here if the if or else-if block executes , the further conditions aren't checked , 
+//    hence to avoid this we only use if for checking these conditions.
+if(checkNum % 3 === 0 && checkNum % 5 ===0){
+    console.log("Fizz");
+}else if(checkNum % 5 ===0 || checkNum % 7 ===0){
+    console.log("Fuzz");
+}else {
+    console.log("Nor divisible by 3 neither by 5 and 7");
+}
+console.log("=============")
+
+
+if(checkNum % 3 === 0 && checkNum % 5 === 0){
+    console.log("Fizz");
+}
+if(checkNum % 3 === 0 || checkNum % 5 === 0){
+    console.log("Fuzz");
+}
+if(checkNum % 7 === 0 ){
+    console.log("Buzz");
+}else{
+    console.log("Not divisible by 7");
+}
+console.log("============")
+
+const input= 35;
+if(input % 2 === 0){
+    console.log("Even Number");
+    if(input % 6 === 0){
+        console.log("Divisible by 6 ");
+    }else{
+        console.log("Not divisible by 6");
+    }
+}else{
+    console.log("Odd number");
+    if(input % 5 ===0){
+        console.log("Divisible by 5");
+    }else{
+        console.log("Not Divisible by 5");
+    }
+}
+console.log("==============")
+
+//find the smallest string 
+
+const string1 = "Pratiksha ";
+const string2 = "Dinesh";
+const string3 = "Dhumane";
+console.log(string1.length); // IMPORTANT => space is counted as length in string .
+
+if(string1.length < string2.length && string1.length < string3.length ){
+    console.log("String 1 is the smallest ");
+}else if (string2.length < string1.length && string2.length < string3.length){
+    console.log("String 2 is the smallest");
+}else {
+    console.log("String 3 is the smallest");
+}
+
+
+/* 
+    Ternary  Operators
+    => condition ? yes : no
+
+*/
+
+let marks = 50;
+(marks > 25) ? console.log("Pass") : console.log("Fail");
+
+//Good Approach  => assign to variable
+
+let result = (marks > 25) ? console.log("Pass") : console.log("Fail");
+console.log(result);
+
+//Nesting 
+
+(marks <= 25) ? console.log("Improvement needed"): (marks <= 50) ? console.log("Good going ") : (marks < 75) ? console.log("Genius") : console.log("Pro");
