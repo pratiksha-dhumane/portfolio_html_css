@@ -457,3 +457,233 @@ console.log(result);
 //Nesting 
 
 (marks <= 25) ? console.log("Improvement needed"): (marks <= 50) ? console.log("Good going ") : (marks < 75) ? console.log("Genius") : console.log("Pro");
+
+/*  
+    LOGICAL OPERATORS 
+
+    1. Or ||  => true if any one true 
+    2. And && => true if all true
+    3. Not !  => opposite value
+    4. Nullish Coalescaling ??
+         => if else kind of 
+         
+
+*/
+
+const physics = 85 ;
+const chem = 89;
+const maths = 90 ;
+
+if(physics >80 && chem > 80 && maths > 80 ){
+    console.log ("Eligible");
+}else{
+    console.log("Not Eligible");
+}
+
+if(physics >80 || chem > 90 || maths > 95){
+    console.log ("Eligible");
+}else{
+    console.log("Not Eligible");
+}
+
+const isStudentEligible = false ;
+console.log("Eligibility : " , !isStudentEligible);
+
+
+//Truthy and falsy values 
+//if values present in a variable it is then  treated as true or else false 
+// FALSY VALUES => "",0, null, undefined
+
+const stud_name="Pratiksha";
+const emp_name="Pratik";
+console.log(stud_name || emp_name); 
+//if stud_name doesnt exist or is a empty string , it will print emp_name
+
+
+
+
+// OR || => Returns the first truthy value or last falsy one
+// AND && => Returns the LAST  truthy value or FIRST falsy one
+// let data1 = null;
+// let data2 ;
+// let data3 = undefined;
+// 0 is a falsy value
+
+//  CONCEPT NAME == SHORT CIRCUITING 
+//                => Dealing with truthy and falsy values
+
+// console.log(data1||data2||data3);
+// //           T       T      T      =>  T (returns first true value)
+
+// console.log(data1||data2||data3);
+// //           T       T      F      =>  T (returns first true value)
+
+// console.log(data1||data2||data3);
+// //           T       F      T      =>  T (returns first true value )
+
+// console.log(data1||data2||data3);
+// //           T       F      F      =>  T (returns true value )
+
+// console.log(data1||data2||data3);
+// //           F       T      T      =>  T (returns first true value )
+
+// console.log(data1||data2||data3);
+// //           F       T      F      =>  T (returns true value )
+
+// console.log(data1||data2||data3);
+// //           F       F      T      =>  T (returns true value )
+
+// console.log("=========")
+// console.log(data1||data2||data3);
+// //           F       F      F       => returns first falsy value
+
+//=================================================
+
+let data1 = 0;
+let data2 ="kj";
+let data3 = "undefined";
+
+
+console.log(data1&&data2&&data3);
+//           T       T      T      =>  T (returns last true value)
+
+console.log(data1&&data2&&data3);
+//           T       T      F      =>  T (returns first false value)
+
+console.log(data1&&data2&&data3);
+//           T       F      T      =>  T (returns false value )
+
+console.log(data1&&data2&&data3);
+//           T       F      F      =>  T (returns first false value )
+
+console.log(data1&&data2&&data3);
+//           F       T      T      =>  T (returns first false value )
+
+console.log(data1&&data2&&data3);
+//           F       T      F      =>  T (returns first false value )
+
+console.log(data1&&data2&&data3);
+//           F       F      T      =>  T (returns first false value )
+
+console.log("=========")
+console.log(data1&&data2&&data3);
+//           F       F      F       => returns first falsy value
+
+
+// AND has higher precedence than OR
+
+console.log("a" && "b" || "c");       // "b" — ("a" && "b") => "b", then "b" || "c" => "b"
+console.log("a" || "b" && "c");       // "a" — "b" && "c" => "c", then "a" || "c" => "a"
+console.log("" && "b" || "c");        // "c" — "" && "b" => "", then "" || "c" => "c"
+console.log("a" && "" || "c");        // "c" — "a" && "" => "", then "" || "c" => "c"
+console.log("a" && null || undefined);// undefined — "a" && null => null, null || undefined => undefined
+console.log("a" || null && "b");      // "a" — null && "b" => null, "a" || null => "a"
+
+
+//NULLISH COALESCING
+
+let car = "BMW";
+let bike =undefined;
+console.log(car ?? "Assign car name first.");
+console.log(bike ?? "Assign bike name first ")
+//if bike is null or undefined the op will display Assign bike name first
+// IMP ====>>>>>>> but it returns empty string if assigned while declaring
+
+
+/*
+     LOOPS
+
+     1. for loop
+        SYNTAX => for (startValue ; condition ; incrementalValue){
+        ....................
+        ....................
+        } 
+    
+
+
+*/
+
+
+for(let i=0;i<=10;i++){
+        console.log(i);
+}
+
+const myName = "Pratiksha";
+for(let i =0;i<myName.length;i++){
+    console.log(myName[i]);
+}
+
+
+//NESTING OF """FOR""" LOOP
+
+for(let i=1;i<=10;i++){
+    for(let j=1;j<=10;j++){
+        let product = i*j;
+        console.log(`${i} x ${j} = ${product} `)
+    }
+    console.log("-----------------")
+}
+
+let fruits =["apple","banana","mango"];
+let fruits1 =["apple","banana"];
+
+for(let i=0;i<fruits.length;i++){
+    for(let j=0;j<fruits1.length;j++){
+        if(fruits[i]==fruits1[j]){
+        console.log(`Same item found 
+Item name : ${fruits[i]}
+====================`);
+        }
+    }
+}
+
+//******   .repeat() is a built-in string method  *********//
+
+for(i=0;i<6;i++){
+    let symbol="* ";
+    console.log(symbol.repeat(i));
+}
+
+for(i=6;i>0;i--){
+    let symbol="* ";
+    console.log(symbol.repeat(i));
+}
+
+
+//This gives us total characters every time loop runs , see the below code  
+let str4="Pratiksha Dinesh Dhumane";
+for(let i=1;i<=str4.length;i++){
+    let totalChar =+ i;
+    console.log(`Total number of characters = ${totalChar}`);
+}
+console.log("==================================")
+
+let count =0;
+for(let i=1;i<=str4.length;i++){
+    count++;
+}
+console.log(`Total number of characters : ${count}`);
+
+//Finding , even and odd from a given range of numbers 
+//range given is 1 to 101
+
+for(let i=1;i<=101;i++){
+    if(i%2==0){
+        console.log(i," is even number : ",i);
+    }else{
+        console.log(i," is odd number : ",i);
+    }
+}
+
+//Find vowels iin a given word
+let vowels ="aeiou";
+let word ="Pratiksha";
+for(let i=0;i<word.length;i++){
+    for(let j=0;j<vowels.length;j++){
+        if(word[i]==vowels[j]){
+            console.log(`Vowel ${vowels[j]} found at index ${i+1} of given word`)
+        }
+    }
+}
+
+
