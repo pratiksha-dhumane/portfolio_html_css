@@ -686,4 +686,314 @@ for(let i=0;i<word.length;i++){
     }
 }
 
+// let primeNum =[];
+// for(let i=0;i<=100;i++){
+//     for(let j=2;j<=100;j++){
+//         if(i%j==0){
+//             primeNum.push(i)
+//         }
+//     }
+    
+// }
+// console.log(primeNum)
+
+
+/* 
+
+    WHILE LOOP 
+    DO - WHILE LOOP 
+
+
+    do{
+    
+    }
+*/
+
+let pointer = 0;
+while(pointer<10){
+    console.log(pointer);
+    pointer++;
+}
+console.log("====================")
+do{
+    console.log(pointer);
+    pointer++;
+}while(pointer < 20)
+
+
+// User enters a number , ask the user to enter the number less than 50 again
+
+/*
+
+let readlineSync = require("readline-sync");
+let no = readlineSync.question("Enter the number :");
+console.log("You entered : ",no);
+
+while(no >= 50){
+     no = readlineSync.question("Enter the number < 50 : ")
+}
+
+console.log("Number accepted");
+
+*/
+
+//TRY CATCH
+/*
+ try{
+ ........
+ }catch(error){
+ console.log("Error")
+ }
+
+
+*/
+
+let userData ="Pratiksha";
+try{
+    console.log(userDataa);
+}catch(error){
+    console.log("Error : " ,error.name); //gives error name
+    console.log("Error : " ,error.message); // gives message of errror
+    console.log("Error : " ,error.stack); // tells from where errror has occoured
+}finally{
+    console.log("Finallyyyyyyyyyyyyy"); 
+    //Finally block executes inspite try or catch 
+}
+console.log("===============================================================================")
+console.log("Even after error occours , execution of program carries on after try catch block");
+
+/*
+        FUNCTIONS => can be called even before declaration
+
+
+    SYNTAX=>    function declaration 
+                function functionName{
+                ..............
+                ..............
+                }
+
+                functionName()  => funaction call
+
+*/
+
+//name is a parameter
+function message(name){
+     console.log(`Welcome ${name} !`)
+}
+//Pratiksha is arguement
+message("Pratiksha");
+
+
+function sum(min,max){
+    let total = 0;
+    for(let i=min;i<=max;i++){
+        total += i;
+    }
+    console.log(total);
+}
+
+sum(7,78);
+
+/*ANONYMOUS FUNCTION 
+ => dont have any name , identity 
+ => Assign function directly to the variable
+ => data type of the assigned varibale is function 
+ => ***************CANT BE CALLED BEFORE DECLARING*******************
+ */
+
+let anonymousFunction = function(name){
+    console.log(`Hello ${name} from anonymous function !`)
+}
+anonymousFunction("Pratiksha");
+console.log(typeof anonymousFunction);
+
+/* FUNCTION EXPRESSION 
+   => we can also assign function to a variable 
+   => You have to access this function with the name of the variable ONLY
+
+
+*/
+
+let print = function draft(user){
+    console.log(`${user} , This is a Function Expression.`);
+    console.log(typeof draft); //inside the function experession , the function is of function data type 
+    // local function => draft
+}
+print("Pratiksha");
+console.log(typeof draft); //outside the function experession , the function is of undefined data type 
+console.log(typeof print); // will show data type as function
+
+/*
+   RETURN 
+   => returns value , can be used any where in the code without printing
+    => when function is called , return value is available with the function
+    => ************after return nothing is executed***********
+    */
+
+function calculateSum(x,y){
+    return x+y;
+}
+
+calculateSum(1,2);  //wont give any value
+console.log(calculateSum(1,2)); // displays value bcoz of return is used
+
+const output = calculateSum(5,6);
+console.log(output);
+
+/*Pure function 
+=> accepts parameter , returns a value ,
+ doesnt change the data type of the acceepted arguements */
+
+/* ARROW FUNCTION or FAT ARROW FUNCTION 
+
+=> you have to assign this to a variable
+
+
+SYNTAX =>
+    const varName = (parameters)=>{
+        ......
+        ......
+        }
+
+
+*/
+
+const addition =(x,y)=>{
+    if(x>y){
+    return x+y;
+}
+}
+
+console.log(addition(9,7));
+console.log("===============")
+
+//Writing fat arrow function in a single line
+const sumResult =(x,y)=> x > y ? x+y : x-y ;
+console.log(sumResult(2,3));
+
+const additionresult =(x,y)=>x+y
+console.log(additionresult(1,2));
+
+/*
+    SET & MAP 
+
+    =>Array stores all values , even duplicate values
+    => set stores unique values only
+
+
+
+*/
+//ARRAY => Push method used
+const studIds= new Array();
+studIds.push(1);
+studIds.push(2);
+studIds.push(1);
+console.log(studIds);
+//ARRAY has indexing system 
+console.log("Indexing available ",studIds[2])
+
+
+console.log("==================");
+//SET => Add method is used 
+const stud_Ids = new Set();
+stud_Ids.add(1);
+stud_Ids.add(2);
+stud_Ids.add(1);
+console.log(stud_Ids);
+//SET doesnt have indexing system 
+console.log("Indexing unavailable ",stud_Ids[2])
+
+//CONVERSION is possible from SET to ARRAY , ARRAY to SET 
+
+console.log("==================");
+const studentIds = new Array(stud_Ids);
+console.log(studentIds)
+
+console.log("==================");
+const StudentIds = new Set(studIds);
+console.log(StudentIds);
+
+//conversion to array using spread operator
+const arrayStudIds = [...StudentIds];
+console.log(arrayStudIds);
+
+/* SET METHODS =>
+    
+    1.Add() => adds elements to set 
+    2. clear()=> deletes the complete set va;ues , gives empty set
+    3. delete() => deletes specific element
+    4. size => displays length
+    5. keys()=> displays keys 
+    6. values()=> displays values of each key
+    7. enteries()=> gives key : value pairs
+    8. has()=> confirms if the value exists , returns boolean value
+    9. forEach() => gives value of each index 
+    */
+ 
+let set = new Set();
+set.add(2);
+set.add(9);
+set.add(6);
+console.log(set);
+set.clear();
+
+set.add(92);
+set.add(19);
+set.add(65);
+set.delete(19);
+console.log(set.size , " is the size of the set");
+
+//keys and valuess are same 
+console.log(set.keys() , " are the keys of the set");
+console.log(set.values() , " are the values of the set");
+
+console.log(set.entries() , " are the entries of the set");
+
+
+console.log(set.has(92));
+console.log("=======================");
+const forEach = set.forEach((value)=>{
+    console.log({value});
+})
+
+console.log(set);
+
+
+/*   MAP 
+    1. set(..,..) => give key value pair as it is a object 
+    2. get(key) => give value of the given key
+    3. delete(key)=> will delete the key value pair of the given key
+    4. size => gives length of the map
+    5. keys() => shows all keys;
+    6. values() => shows all values 
+    7. forEach  => gives values for each key 
+    8. has() => confirms if key exists , returns boolean
+
+
+*/
+
+const newMap = new Map();
+newMap.set(10, " Value will be alloted soon");
+newMap.set(30, " Value will be alloted later");
+console.log(newMap.get(10));
+console.log(newMap.delete(30));
+newMap.set(30, " Value will be alloted later");
+console.log(newMap.size);
+console.log(newMap.keys());
+console.log(newMap.values());
+
+newMap.forEach((value)=>{
+    console.log(value)
+})
+
+console.log(newMap.has(30));
+console.log(newMap);
+
+
+
+
+
+
+
+
 
